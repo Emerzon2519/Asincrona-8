@@ -1,0 +1,85 @@
+<!-- <p>pagina1 works!</p>
+<p>Nombre: {{ nombre }}</p>
+<p>Edad: {{edad}}</p> -->
+
+<!-- <p *ngIf="edad<18; else mayor">Es menor de edad</p>
+<ng-template #mayor>
+    <p>Es mayor de edad</p>
+    
+    <p>Sueldos</p>
+    <ul class="list-group">
+        <li *ngFor="let sb of sueldos " class="list-group-item">
+            <a href="#">{{sb}}</a>
+        </li>
+    </ul>
+    
+</ng-template> -->
+
+<!-- <form>
+    <input type="text" #txtUser>
+    <input type="button" value="Enviar" (click)="Validar(txtUser.value)">
+    </form>
+    <p *ngIf="resultado==true; else error">Usuario Correcto</p>
+    <ng-template #error>
+    <p>Usuario incorrecto</p>
+    </ng-template>
+    
+    <p>Resultado {{ mensaje }}</p> -->
+
+<!-- <h1>Login</h1>
+<form>
+    <label>Usuario</label>
+    <input type="text" #txtUser>
+    <label for="">Password</label>
+    <input type="text" #textPas>
+    <input type="button" value="Enviar" (click)="ValidacionUser(txtUser.value)">
+</form> -->
+
+<label >Nombre:</label>
+            
+    <input type="text" [(ngModel)]="persona.nombre"/> <br> <br>
+        
+         
+       <label>Apellido:</label>
+            
+    <input type="text" [(ngModel)]="persona.apellido"/> <br> <br>
+    
+                    
+    <label>Edad:</label>
+                
+<input type="number" [(ngModel)]="persona.edad"/> <br> <br>
+              
+       <input  type="button" value="Guardar" (click)="agregar()"/>
+        
+        <table>
+        
+        <tr>
+                  
+<th>Nombre</th>
+                  
+<th>Apellido</th>
+                 
+ <th>Edad</th>
+                  
+<th>Tipo</th>
+               
+ </tr>
+                
+<tr *ngFor="let p of personas">
+                
+  <td>{{ p.nombre }}</td>
+                 
+ <td>{{ p.apellido }}</td>
+                
+  <td>{{ p.edad }}</td>
+                 
+ <td *ngIf="p.edad>=18">Mayor de edad</td>
+                  
+<td *ngIf="p.edad<18">Menor de edad</td>
+            
+    </tr>
+             
+</table>
+
+
+  
